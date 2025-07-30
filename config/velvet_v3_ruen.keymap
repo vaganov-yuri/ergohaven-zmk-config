@@ -143,9 +143,9 @@
 
         sym_en {
             bindings = <
-&trans     &trans    &kp ASTRK  &kp MINUS    &kp PLUS       &trans                              &trans     &kp EQUAL   &kp FSLH   &kp NUBS   &trans     &trans
-&kp TILDE  &kp SQT   &kp GRAVE  &kp DQT      &kp DOT        &kp DOLLAR                          &kp PRCNT  &kp COMMA   &skobki1   &skobki2   &skobki3   &skobki4
-&trans     &kp SEMI  &kp HASH   &kp AT_SIGN  &kp AMPERSAND  &kp COLON                           &kp EXCL   &kp PIPE    &kp CARET  &kp UNDER  &kp QMARK  &trans
+&trans     &trans    &kp ASTRK  &kp MINUS    &kp PLUS       &trans                              &trans     &kp EQUAL   &kp FSLH   &kp BACKSLASH  &trans     &trans
+&kp TILDE  &kp SQT   &kp GRAVE  &kp DQT      &kp DOT        &kp DOLLAR                          &kp PRCNT  &kp COMMA   &skobki1   &skobki2       &skobki3   &skobki4
+&trans     &kp SEMI  &kp HASH   &kp AT_SIGN  &kp AMPERSAND  &kp COLON                           &kp EXCL   &kp PIPE    &kp CARET  &kp UNDER      &kp QMARK  &trans
                      &trans     &trans       &kp BACKSPACE  &mo 4       &kp SPACE    &kp ENTER  &trans     &kp DELETE  &trans     &trans
             >;
 
