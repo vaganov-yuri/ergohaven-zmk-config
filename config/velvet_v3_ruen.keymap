@@ -93,14 +93,14 @@
         toru: toru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 1 &kp GLOBE>;
+            bindings = <&kp GLOBE &to 1>;
             label = "TORU";
         };
 
         toen: toen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &kp GLOBE>;
+            bindings = <&kp GLOBE &to 0>;
             label = "TOEN";
         };
     };
@@ -110,7 +110,7 @@
 
         en {
             bindings = <
-&trans     &trans              &kp W           &kp E             &kp R               &trans                        &trans  &kp U                &kp I                 &kp O                  &trans               &trans
+&kp GLOBE  &trans              &kp W           &kp E             &kp R               &trans                        &trans  &kp U                &kp I                 &kp O                  &trans               &trans
 &toru      &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_COMMAND F  &kp G                         &kp H   &mt RIGHT_COMMAND J  &mt RIGHT_SHIFT K     &mt RIGHT_ALT L        &mt RIGHT_CONTROL P  &trans
 &kp LG(Z)  &kp Z               &kp X           &kp C             &kp V               &kp B                         &kp N   &kp M                &kp Q                 &kp T                  &kp Y                &trans
                                &kp LG(C)       &kp LG(V)         &kp BACKSPACE       &mo 2   &kp SPACE    &kp RET  &mo 3   &kp DELETE           &kp LA(LEFT_BRACKET)  &kp LA(RIGHT_BRACKET)
