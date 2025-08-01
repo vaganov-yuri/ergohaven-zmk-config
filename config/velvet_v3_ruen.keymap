@@ -133,10 +133,10 @@
 
         sym_en {
             bindings = <
-&trans         &trans            &trans          &trans                &trans         &trans                                   &trans        &trans       &trans                 &trans           &trans             &trans
-&kp LESS_THAN  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp COMMA      &kp DOLLAR                               &kp PERCENT   &kp DOT      &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GREATER_THAN
-&trans         &trans            &trans          &trans                &kp HASH       &kp EXCLAMATION                          &kp QUESTION  &kp AT_SIGN  &trans                 &trans           &trans             &trans
-                                 &trans          &trans                &kp BACKSPACE  &mo 4            &kp SPACE    &kp ENTER  &trans        &kp DELETE   &trans                 &trans
+&trans         &trans                  &trans                   &trans                           &trans                  &trans                                   &trans        &trans                 &trans                             &trans                     &trans                   &trans
+&kp LESS_THAN  &mt LCTRL LEFT_BRACKET  &mt LEFT_ALT LEFT_BRACE  &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LEFT_COMMAND COMMA  &kp DOLLAR                               &kp PERCENT   &mt RIGHT_COMMAND DOT  &mt RIGHT_SHIFT RIGHT_PARENTHESIS  &mt RIGHT_ALT RIGHT_BRACE  &mt RCTRL RIGHT_BRACKET  &kp GREATER_THAN
+&trans         &trans                  &trans                   &trans                           &kp HASH                &kp EXCLAMATION                          &kp QUESTION  &kp AT_SIGN            &trans                             &trans                     &trans                   &trans
+                                       &trans                   &trans                           &kp BACKSPACE           &mo 4            &kp SPACE    &kp ENTER  &trans        &kp DELETE             &trans                             &trans
             >;
 
             display-name = "Symbols";
