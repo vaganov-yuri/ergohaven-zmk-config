@@ -54,10 +54,10 @@
 
         en {
             bindings = <
-&to 0                 &none               &kp W           &kp E             &kp R               &none                        &new_macro  &kp U                &kp I              &kp O            &none                &to 5
-&tolang 1             &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_COMMAND F  &kp G                        &kp H       &mt RIGHT_COMMAND J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL P  &none
-&kp LG(LEFT_BRACKET)  &kp Z               &kp X           &kp C             &kp V               &kp B                        &kp N       &kp M                &kp Q              &kp T            &kp Y                &kp LG(RIGHT_BRACKET)
-                                          &kp LG(C)       &kp LG(V)         &kp DELETE          &mo 3  &kp SPACE    &kp RET  &mo 2       &kp BACKSPACE        &kp LG(Z)          &kp LS(LG(Z))
+&to 0                 &none               &kp W           &kp E             &kp R               &new_macro                        &none  &kp U                &kp I              &kp O            &none                &to 5
+&tolang 1             &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_COMMAND F  &kp G                             &kp H  &mt RIGHT_COMMAND J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL P  &none
+&kp LG(LEFT_BRACKET)  &kp Z               &kp X           &kp C             &kp V               &kp B                             &kp N  &kp M                &kp Q              &kp T            &kp Y                &kp LG(RIGHT_BRACKET)
+                                          &kp LG(C)       &kp LG(V)         &kp DELETE          &mo 3       &kp SPACE    &kp RET  &mo 2  &kp BACKSPACE        &kp LG(Z)          &kp LS(LG(Z))
             >;
 
             display-name = "Base";
