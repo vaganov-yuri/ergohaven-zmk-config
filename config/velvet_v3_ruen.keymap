@@ -25,10 +25,10 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&macro_param_1to1 &tolang MACRO_PLACEHOLDER>,
+                <&kp LC(SPACE) &macro_param_1to1 &to MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&tolang 1>;
+                <&kp LC(SPACE) &to 1>;
 
             label = "RUEN";
         };
