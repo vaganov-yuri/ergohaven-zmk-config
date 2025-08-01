@@ -112,10 +112,10 @@
 
         en {
             bindings = <
-&to 0                 &trans              &kp W           &kp E             &kp R               &trans                        &trans  &kp U                &kp I              &kp O            &trans               &to 5
-&toru                 &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_COMMAND F  &kp G                         &kp H   &mt RIGHT_COMMAND J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL P  &trans
-&kp LG(LEFT_BRACKET)  &kp Z               &kp X           &kp C             &kp V               &kp B                         &kp N   &kp M                &kp Q              &kp T            &kp Y                &kp LG(RIGHT_BRACKET)
-                                          &kp LG(C)       &kp LG(V)         &kp BACKSPACE       &mo 3   &kp SPACE    &kp RET  &mo 2   &kp DELETE           &kp LG(Z)          &kp LS(LG(Z))
+&to 0                 &none               &kp W           &kp E             &kp R               &none                        &none  &kp U                &kp I              &kp O            &none                &to 5
+&toru                 &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_COMMAND F  &kp G                        &kp H  &mt RIGHT_COMMAND J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL P  &none
+&kp LG(LEFT_BRACKET)  &kp Z               &kp X           &kp C             &kp V               &kp B                        &kp N  &kp M                &kp Q              &kp T            &kp Y                &kp LG(RIGHT_BRACKET)
+                                          &kp LG(C)       &kp LG(V)         &kp DELETE          &mo 3  &kp SPACE    &kp RET  &mo 2  &kp BACKSPACE        &kp LG(Z)          &kp LS(LG(Z))
             >;
 
             display-name = "Base";
@@ -127,16 +127,16 @@
 &to 0                 &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U              &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                        &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA             &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HARD_SIGN
 &toen                 &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &mt LEFT_SHIFT RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                        &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &mt RIGHT_SHIFT RU_CYRILLIC_EL  &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &kp LG(LEFT_BRACKET)  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES             &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                         &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE              &kp RU_CYRILLIC_YU     &kp RU_CYRILLIC_HA   &kp LG(RIGHT_BRACKET)
-                                               &kp LG(C)             &kp LG(V)                      &kp BACKSPACE       &mo 3               &kp SPACE    &kp RET  &mo 2               &kp DELETE                 &kp LG(Z)                       &kp LS(LG(Z))
+                                               &kp LG(C)             &kp LG(V)                      &kp DELETE          &mo 3               &kp SPACE    &kp RET  &mo 2               &kp BACKSPACE              &kp LG(Z)                       &kp LS(LG(Z))
             >;
         };
 
         sym_en {
             bindings = <
-&trans         &trans                  &trans                   &trans                           &trans                  &trans                                   &trans        &trans                 &trans                             &trans                     &trans                   &trans
+&none          &none                   &none                    &none                            &none                   &none                                    &none         &none                  &none                              &none                      &none                    &none
 &kp LESS_THAN  &mt LCTRL LEFT_BRACKET  &mt LEFT_ALT LEFT_BRACE  &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LEFT_COMMAND COMMA  &kp DOLLAR                               &kp PERCENT   &mt RIGHT_COMMAND DOT  &mt RIGHT_SHIFT RIGHT_PARENTHESIS  &mt RIGHT_ALT RIGHT_BRACE  &mt RCTRL RIGHT_BRACKET  &kp GREATER_THAN
-&trans         &trans                  &trans                   &trans                           &kp HASH                &kp EXCLAMATION                          &kp QUESTION  &kp AT_SIGN            &trans                             &trans                     &trans                   &trans
-                                       &trans                   &trans                           &kp BACKSPACE           &mo 4            &kp SPACE    &kp ENTER  &trans        &kp DELETE             &trans                             &trans
+&none          &none                   &none                    &none                            &kp HASH                &kp EXCLAMATION                          &kp QUESTION  &kp AT_SIGN            &none                              &none                      &none                    &none
+                                       &none                    &none                            &kp DELETE              &mo 4            &kp SPACE    &kp ENTER  &trans        &kp BACKSPACE          &none                              &none
             >;
 
             display-name = "Symbols";
@@ -145,19 +145,19 @@
         layer_5 {
             display-name = "Symbols";
             bindings = <
-&trans     &trans           &trans              &trans                       &trans                 &trans                                 &trans     &trans                       &trans                         &trans               &trans          &trans
+&none      &none            &none               &none                        &none                  &none                                  &none      &none                        &none                          &none                &none           &none
 &kp CARET  &mt LCTRL MINUS  &mt LEFT_ALT GRAVE  &mt LEFT_SHIFT SINGLE_QUOTE  &mt LEFT_COMMAND PIPE  &kp SEMICOLON                          &kp COLON  &mt RIGHT_COMMAND AMPERSAND  &mt RIGHT_SHIFT DOUBLE_QUOTES  &mt RIGHT_ALT EQUAL  &mt RCTRL PLUS  &kp ASTERISK
-&trans     &trans           &trans              &trans                       &kp TILDE              &kp BACKSLASH                          &kp SLASH  &kp UNDERSCORE               &trans                         &trans               &trans          &trans
-                            &trans              &trans                       &kp BACKSPACE          &trans         &kp SPACE    &kp ENTER  &mo 4      &kp DELETE                   &trans                         &trans
+&none      &none            &none               &none                        &kp TILDE              &kp BACKSLASH                          &kp SLASH  &kp UNDERSCORE               &none                          &none                &none           &none
+                            &none               &none                        &kp DELETE             &trans         &kp SPACE    &kp ENTER  &mo 4      &kp BACKSPACE                &none                          &none
             >;
         };
 
         nav {
             bindings = <
-&trans  &kp ESC        &kp HOME                 &kp UP_ARROW               &kp END                       &kp INSERT                             &trans  &kp N7                &kp N8              &kp N9            &trans     &trans
-&trans  &mt LCTRL TAB  &mt LEFT_ALT LEFT_ARROW  &mt LEFT_SHIFT DOWN_ARROW  &mt LEFT_COMMAND RIGHT_ARROW  &kp PAGE_UP                            &kp N0  &mt RIGHT_COMMAND N4  &mt RIGHT_SHIFT N5  &mt RIGHT_ALT N6  &kp RCTRL  &trans
-&trans  &kp CAPSLOCK   &trans                   &trans                     &trans                        &kp PAGE_DOWN                          &trans  &kp N1                &kp N2              &kp N3            &trans     &trans
-                       &trans                   &trans                     &kp BACKSPACE                 &trans         &kp SPACE    &kp ENTER  &trans  &kp DELETE            &trans              &trans
+&none  &kp ESC        &kp HOME                 &kp UP_ARROW               &kp END                       &kp INSERT                             &none   &kp N7                &kp N8              &kp N9            &none      &none
+&none  &mt LCTRL TAB  &mt LEFT_ALT LEFT_ARROW  &mt LEFT_SHIFT DOWN_ARROW  &mt LEFT_COMMAND RIGHT_ARROW  &kp PAGE_UP                            &kp N0  &mt RIGHT_COMMAND N4  &mt RIGHT_SHIFT N5  &mt RIGHT_ALT N6  &kp RCTRL  &none
+&none  &kp CAPSLOCK   &none                    &none                      &none                         &kp PAGE_DOWN                          &none   &kp N1                &kp N2              &kp N3            &none      &none
+                      &none                    &none                      &kp DELETE                    &trans         &kp SPACE    &kp ENTER  &trans  &kp BACKSPACE         &none               &none
             >;
 
             display-name = "nav";
