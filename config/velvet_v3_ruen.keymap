@@ -29,6 +29,7 @@
                 <&macro_param_1to1 &to MACRO_PLACEHOLDER &kp LC(SPACE)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
+                <&macro_tap>,
                 <&to 1 &kp LC(SPACE)>;
 
             label = "RUEN";
