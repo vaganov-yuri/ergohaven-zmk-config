@@ -4,6 +4,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+&mt { flavor = "tap-preferred"; };
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -110,10 +112,10 @@
 
         en {
             bindings = <
-&to 0                 &trans              &kp W           &kp E             &kp R               &trans                        &trans  &kp U                &kp I              &kp O            &trans               &trans
+&to 0                 &trans              &kp W           &kp E             &kp R               &trans                        &trans  &kp U                &kp I              &kp O            &trans               &to 5
 &toru                 &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_COMMAND F  &kp G                         &kp H   &mt RIGHT_COMMAND J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL P  &trans
 &kp LG(LEFT_BRACKET)  &kp Z               &kp X           &kp C             &kp V               &kp B                         &kp N   &kp M                &kp Q              &kp T            &kp Y                &kp LG(RIGHT_BRACKET)
-                                          &kp LG(C)       &kp LG(V)         &kp BACKSPACE       &mo 2   &kp SPACE    &kp RET  &mo 3   &kp DELETE           &kp LG(Z)          &kp LS(LG(Z))
+                                          &kp LG(C)       &kp LG(V)         &kp BACKSPACE       &mo 3   &kp SPACE    &kp RET  &mo 2   &kp DELETE           &kp LG(Z)          &kp LS(LG(Z))
             >;
 
             display-name = "Base";
@@ -125,7 +127,28 @@
 &to 0                 &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U              &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                        &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA             &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HARD_SIGN
 &toen                 &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &mt LEFT_SHIFT RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                        &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &mt RIGHT_SHIFT RU_CYRILLIC_EL  &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &kp LG(LEFT_BRACKET)  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES             &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                         &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE              &kp RU_CYRILLIC_YU     &kp RU_CYRILLIC_HA   &kp LG(RIGHT_BRACKET)
-                                               &kp LG(C)             &kp LG(V)                      &kp BACKSPACE       &mo 2               &kp SPACE    &kp RET  &mo 3               &kp DELETE                 &kp LG(Z)                       &kp LS(LG(Z))
+                                               &kp LG(C)             &kp LG(V)                      &kp BACKSPACE       &mo 3               &kp SPACE    &kp RET  &mo 2               &kp DELETE                 &kp LG(Z)                       &kp LS(LG(Z))
+            >;
+        };
+
+        sym_en {
+            bindings = <
+&trans         &trans            &trans          &trans                &trans         &trans                                   &trans        &trans       &trans                 &trans           &trans             &trans
+&kp LESS_THAN  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp COMMA      &kp DOLLAR                               &kp PERCENT   &kp DOT      &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GREATER_THAN
+&trans         &trans            &trans          &trans                &kp HASH       &kp EXCLAMATION                          &kp QUESTION  &kp AT_SIGN  &trans                 &trans           &trans             &trans
+                                 &trans          &trans                &kp BACKSPACE  &mo 4            &kp SPACE    &kp ENTER  &trans        &kp DELETE   &trans                 &trans
+            >;
+
+            display-name = "Symbols";
+        };
+
+        layer_5 {
+            display-name = "Symbols";
+            bindings = <
+&trans     &trans           &trans              &trans                       &trans                 &trans                                 &trans     &trans                       &trans                         &trans               &trans          &trans
+&kp CARET  &mt LCTRL MINUS  &mt LEFT_ALT GRAVE  &mt LEFT_SHIFT SINGLE_QUOTE  &mt LEFT_COMMAND PIPE  &kp SEMICOLON                          &kp COLON  &mt RIGHT_COMMAND AMPERSAND  &mt RIGHT_SHIFT DOUBLE_QUOTES  &mt RIGHT_ALT EQUAL  &mt RCTRL PLUS  &kp ASTERISK
+&trans     &trans           &trans              &trans                       &kp TILDE              &kp BACKSLASH                          &kp SLASH  &kp UNDERSCORE               &trans                         &trans               &trans          &trans
+                            &trans              &trans                       &kp BACKSPACE          &trans         &kp SPACE    &kp ENTER  &mo 4      &kp DELETE                   &trans                         &trans
             >;
         };
 
@@ -134,30 +157,19 @@
 &trans  &kp ESC        &kp HOME                 &kp UP_ARROW               &kp END                       &kp INSERT                             &trans  &kp N7                &kp N8              &kp N9            &trans     &trans
 &trans  &mt LCTRL TAB  &mt LEFT_ALT LEFT_ARROW  &mt LEFT_SHIFT DOWN_ARROW  &mt LEFT_COMMAND RIGHT_ARROW  &kp PAGE_UP                            &kp N0  &mt RIGHT_COMMAND N4  &mt RIGHT_SHIFT N5  &mt RIGHT_ALT N6  &kp RCTRL  &trans
 &trans  &kp CAPSLOCK   &trans                   &trans                     &trans                        &kp PAGE_DOWN                          &trans  &kp N1                &kp N2              &kp N3            &trans     &trans
-                       &trans                   &trans                     &kp BACKSPACE                 &trans         &kp SPACE    &kp ENTER  &mo 4   &kp DELETE            &trans              &trans
+                       &trans                   &trans                     &kp BACKSPACE                 &trans         &kp SPACE    &kp ENTER  &trans  &kp DELETE            &trans              &trans
             >;
 
             display-name = "nav";
             label = "Navigation";
         };
 
-        sym_en {
-            bindings = <
-&trans     &trans    &kp ASTRK  &kp MINUS    &kp PLUS       &trans                              &trans     &kp EQUAL   &kp FSLH   &kp BACKSLASH  &trans     &trans
-&kp TILDE  &kp SQT   &kp GRAVE  &kp DQT      &kp DOT        &kp DOLLAR                          &kp PRCNT  &kp COMMA   &skobki1   &skobki2       &skobki3   &skobki4
-&trans     &kp SEMI  &kp HASH   &kp AT_SIGN  &kp AMPERSAND  &kp COLON                           &kp EXCL   &kp PIPE    &kp CARET  &kp UNDER      &kp QMARK  &trans
-                     &trans     &trans       &kp BACKSPACE  &mo 4       &kp SPACE    &kp ENTER  &trans     &kp DELETE  &trans     &trans
-            >;
-
-            display-name = "Symbols";
-        };
-
         adj {
             bindings = <
-&bootloader  &none  &kp F1  &kp F2   &kp F3   &kp F4                   &bt BT_CLR_ALL  &kp C_BRI_DN  &kp C_BRI_UP      &kp PSCRN   &none  &none
-&none        &none  &kp F5  &kp F6   &kp F7   &kp F8                   &out OUT_BLE    &kp C_VOL_DN  &kp C_VOL_UP      &kp K_MUTE  &none  &studio_unlock
-&none        &none  &kp F9  &kp F10  &kp F11  &kp F12                  &out OUT_USB    &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT  &none  &none
-                    &none   &none    &none    &none    &none    &none  &none           &none         &none             &none
+&to 0  &none  &kp F1  &kp F2   &kp F3   &kp F4                   &bt BT_CLR_ALL  &kp C_BRI_DN  &kp C_BRI_UP      &kp PSCRN   &none  &none
+&none  &none  &kp F5  &kp F6   &kp F7   &kp F8                   &out OUT_BLE    &kp C_VOL_DN  &kp C_VOL_UP      &kp K_MUTE  &none  &studio_unlock
+&none  &none  &kp F9  &kp F10  &kp F11  &kp F12                  &out OUT_USB    &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT  &none  &none
+              &none   &none    &none    &none    &none    &none  &none           &none         &none             &none
             >;
 
             display-name = "Adjust";
