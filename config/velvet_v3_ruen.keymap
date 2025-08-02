@@ -43,10 +43,10 @@
 
         en {
             bindings = <
-&to 0                 &none               &kp W           &kp E             &kp R               &none                        &none  &kp U                &kp I              &kp O            &none                &to 5
-&tolang 1             &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_COMMAND F  &kp G                        &kp H  &mt RIGHT_COMMAND J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL P  &none
-&kp LG(LEFT_BRACKET)  &kp Z               &kp X           &kp C             &kp V               &kp B                        &kp N  &kp M                &kp Q              &kp T            &kp Y                &kp LG(RIGHT_BRACKET)
-                                          &kp LG(C)       &kp LG(V)         &kp DELETE          &mo 3  &kp SPACE    &kp RET  &mo 2  &kp BACKSPACE        &kp LG(Z)          &kp LS(LG(Z))
+&to 0           &none               &kp W           &kp E             &kp R               &none                        &none  &kp U                &kp I              &kp O            &none                &to 5
+&tolang 1       &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_COMMAND F  &kp G                        &kp H  &mt RIGHT_COMMAND J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL P  &none
+&kp LEFT_ARROW  &kp Z               &kp X           &kp C             &kp V               &kp B                        &kp N  &kp M                &kp Q              &kp T            &kp Y                &kp RIGHT_ARROW
+                                    &kp LG(C)       &kp LG(V)         &kp DELETE          &mo 3  &kp SPACE    &kp RET  &mo 2  &kp BACKSPACE        &kp LG(Z)          &kp LS(LG(Z))
             >;
 
             display-name = "Base";
@@ -55,10 +55,10 @@
         ru {
             display-name = "Ru";
             bindings = <
-&to 0                 &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U              &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                        &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA             &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HARD_SIGN
-&tolang 0             &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &mt LEFT_SHIFT RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                        &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &mt RIGHT_SHIFT RU_CYRILLIC_EL  &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp LG(LEFT_BRACKET)  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES             &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                         &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE              &kp RU_CYRILLIC_YU     &kp RU_CYRILLIC_HA   &kp LG(RIGHT_BRACKET)
-                                               &kp LG(C)             &kp LG(V)                      &kp DELETE          &mo 3               &kp SPACE    &kp RET  &mo 2               &kp BACKSPACE              &kp LG(Z)                       &kp LS(LG(Z))
+&to 0           &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE            &kp RU_CYRILLIC_U              &kp RU_CYRILLIC_KA              &kp RU_CYRILLIC_IE                        &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE              &kp RU_CYRILLIC_SHA             &kp RU_CYRILLIC_SHCHA         &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HARD_SIGN
+&tolang 0       &mt LCTRL RU_CYRILLIC_EF  &mt LEFT_ALT RU_CYRILLIC_YERU  &mt LEFT_SHIFT RU_CYRILLIC_VE  &mt LEFT_COMMAND RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                        &kp RU_CYRILLIC_ER  &mt RIGHT_COMMAND RU_CYRILLIC_O  &mt RIGHT_SHIFT RU_CYRILLIC_EL  &mt RIGHT_ALT RU_CYRILLIC_DE  &mt RCTRL RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp LEFT_ARROW  &kp RU_CYRILLIC_YA        &kp RU_CYRILLIC_CHE            &kp RU_CYRILLIC_ES             &kp RU_CYRILLIC_EM              &kp RU_CYRILLIC_I                         &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN        &kp RU_CYRILLIC_BE              &kp RU_CYRILLIC_YU            &kp RU_CYRILLIC_HA         &kp RIGHT_ARROW
+                                          &kp LG(C)                      &kp LG(V)                      &kp DELETE                      &ruen 3             &kp SPACE    &kp RET  &ruen 2             &kp BACKSPACE                    &kp LG(Z)                       &kp LS(LG(Z))
             >;
         };
 
