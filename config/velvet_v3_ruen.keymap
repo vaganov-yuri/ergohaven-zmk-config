@@ -64,10 +64,10 @@
 
         sym_en {
             bindings = <
-&none          &none                   &none                    &none                            &none                   &none                                    &none         &none                  &none                              &none                      &none                    &none
-&kp LESS_THAN  &mt LCTRL LEFT_BRACKET  &mt LEFT_ALT LEFT_BRACE  &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LEFT_COMMAND COMMA  &kp DOLLAR                               &kp PERCENT   &mt RIGHT_COMMAND DOT  &mt RIGHT_SHIFT RIGHT_PARENTHESIS  &mt RIGHT_ALT RIGHT_BRACE  &mt RCTRL RIGHT_BRACKET  &kp GREATER_THAN
-&none          &none                   &none                    &none                            &kp HASH                &kp EXCLAMATION                          &kp QUESTION  &kp AT_SIGN            &none                              &none                      &none                    &none
-                                       &none                    &none                            &kp DELETE              &mo 4            &kp SPACE    &kp ENTER  &trans        &kp BACKSPACE          &none                              &none
+&none          &none                   &none                    &none                            &none                      &none                                    &none         &none                     &none                              &none                      &none                    &none
+&kp LESS_THAN  &mt LCTRL LEFT_BRACKET  &mt LEFT_ALT LEFT_BRACE  &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LEFT_COMMAND RU_COMMA  &kp DOLLAR                               &kp PERCENT   &mt RIGHT_COMMAND RU_DOT  &mt RIGHT_SHIFT RIGHT_PARENTHESIS  &mt RIGHT_ALT RIGHT_BRACE  &mt RCTRL RIGHT_BRACKET  &kp GREATER_THAN
+&none          &none                   &none                    &none                            &kp POUND                  &kp EXCLAMATION                          &kp QUESTION  &kp AT_SIGN               &none                              &none                      &none                    &none
+                                       &none                    &none                            &kp DELETE                 &mo 4            &kp SPACE    &kp ENTER  &trans        &kp BACKSPACE             &none                              &none
             >;
 
             display-name = "Symbols";
