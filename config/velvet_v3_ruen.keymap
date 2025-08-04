@@ -44,7 +44,7 @@
         en {
             bindings = <
 &to 0           &none        &kp P           &kp Y             &kp F               &none                        &none  &kp G                &kp C              &kp R            &none        &to 5
-&tolang 1       &mt LCTRL A  &mt LEFT_ALT O  &mt LEFT_SHIFT E  &mt LEFT_COMMAND U  &kp I                        &kp D  &mt RIGHT_COMMAND H  &mt RIGHT_SHIFT T  &mt N RIGHT_ALT  &mt RCTRL S  &none
+&tolang 1       &mt LCTRL A  &mt LEFT_ALT O  &mt LEFT_SHIFT E  &mt LEFT_COMMAND U  &kp I                        &kp D  &mt RIGHT_COMMAND H  &mt RIGHT_SHIFT T  &mt RIGHT_ALT N  &mt RCTRL S  &none
 &kp LEFT_ARROW  &kp L        &kp Q           &kp J             &kp K               &kp X                        &kp B  &kp M                &kp W              &kp V            &kp Z        &kp RIGHT_ARROW
                              &kp LG(C)       &kp LG(V)         &kp DELETE          &mo 3  &kp SPACE    &kp RET  &mo 2  &kp BACKSPACE        &kp LG(Z)          &kp LS(LG(Z))
             >;
