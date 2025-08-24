@@ -36,6 +36,23 @@
 
             label = "RUEN";
         };
+
+        ht: ht {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &macro_param_2to2 &mt MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&kp LC(SPACE)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &macro_param_2to2 &mt MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&kp LC(SPACE)>;
+
+            label = "HT";
+        };
     };
 
     keymap {
@@ -56,7 +73,7 @@
             display-name = "Ru";
             bindings = <
 &to 0           &kp RU_CYRILLIC_TSE      &kp RU_CYRILLIC_ER          &kp RU_CYRILLIC_U              &kp RU_CYRILLIC_EF              &kp RU_CYRILLIC_CHE                            &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_GHE               &kp RU_CYRILLIC_ES              &kp RU_CYRILLIC_YA            &kp RU_CYRILLIC_SOFT_SIGN    &kp RU_CYRILLIC_HARD_SIGN
-&tolang 0       &mt LCTRL RU_CYRILLIC_A  &mt LEFT_ALT RU_CYRILLIC_O  &mt LEFT_SHIFT RU_CYRILLIC_IE  &mt LEFT_COMMAND RU_CYRILLIC_I  &kp RU_CYRILLIC_SHORT_I                        &kp RU_CYRILLIC_DE    &mt RIGHT_COMMAND RU_CYRILLIC_EN  &mt RIGHT_SHIFT RU_CYRILLIC_TE  &mt RIGHT_ALT RU_CYRILLIC_PE  &mt RCTRL RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_E
+&tolang 0       &ht LCTRL RU_CYRILLIC_A  &ht LEFT_ALT RU_CYRILLIC_O  &ht LEFT_SHIFT RU_CYRILLIC_IE  &ht LEFT_COMMAND RU_CYRILLIC_I  &kp RU_CYRILLIC_SHORT_I                        &kp RU_CYRILLIC_DE    &ht RIGHT_COMMAND RU_CYRILLIC_EN  &ht RIGHT_SHIFT RU_CYRILLIC_TE  &ht RIGHT_ALT RU_CYRILLIC_PE  &ht RCTRL RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_E
 &kp LEFT_ARROW  &kp RU_CYRILLIC_EL       &kp RU_CYRILLIC_YU          &kp RU_CYRILLIC_ZHE            &kp RU_CYRILLIC_KA              &kp RU_CYRILLIC_HA                             &kp RU_CYRILLIC_BE    &kp RU_CYRILLIC_EM                &kp RU_CYRILLIC_SHA             &kp RU_CYRILLIC_VE            &kp RU_CYRILLIC_ZE           &kp RIGHT_ARROW
                                          &kp LG(C)                   &kp LG(V)                      &kp DELETE                      &ruen 3                  &kp SPACE    &kp RET  &ruen 2               &kp BACKSPACE                     &kp LG(Z)                       &kp LS(LG(Z))
             >;
