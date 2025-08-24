@@ -32,7 +32,8 @@
                 <&macro_release>,
                 <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&kp LC(SPACE)>;
+                <&kp LC(SPACE)>,
+                <&macro_press>;
 
             label = "RUEN";
         };
@@ -43,6 +44,7 @@
             bindings =
                 <&macro_press>,
                 <&macro_param_1to1 &macro_param_2to2 &mt MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+                <&macro_tap_time 300>,
                 <&macro_tap>,
                 <&kp LC(SPACE)>,
                 <&macro_pause_for_release>,
