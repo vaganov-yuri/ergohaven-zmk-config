@@ -11,31 +11,6 @@
     combos { compatible = "zmk,combos"; };
 
     macros {
-        tolang: toru {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&kp LC(SPACE) &macro_param_1to1 &to MACRO_PLACEHOLDER>;
-            label = "TORU";
-        };
-
-        ruen: ruen {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&kp LC(SPACE)>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&kp LC(SPACE)>,
-                <&macro_press>;
-
-            label = "RUEN";
-        };
-
         repit: repit {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -43,22 +18,77 @@
             label = "REPIT";
         };
 
-        rumt: new_macr {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
+        kp_lang: kp_lang {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPS>;
+            label = "KP_LANG";
+        };
+
+        tog_lang: togl_lang {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &macro_param_2to2 &mt MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&kp_lang &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+
+            label = "TOGL_LANG";
+        };
+
+        ru_hold: ru_mt {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
                 <&macro_tap>,
                 <&to 0>,
+                <&macro_press>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&macro_param_1to1 &macro_param_2to2 &mt MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&to 1>,
-                <&macro_press>;
+                <&to 1>;
 
-            label = "NEW_MACR";
+            label = "RU_MT";
+        };
+
+        ru_mo: ru_mo {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&kp_lang>,
+                <&macro_press>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&kp_lang>;
+
+            label = "RU_MO";
+        };
+    };
+
+    behaviors {
+        ru_mt: ru_mt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RU_MT";
+            bindings = <&ru_hold>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+        };
+
+        ru_lt: ru_lt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RU_LT";
+            bindings = <&ru_mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -68,9 +98,9 @@
         en {
             bindings = <
 &to 0           &none    &kp W       &kp F       &kp P          &kp B                                      &kp J  &kp L        &kp U       &kp Y          &none    &none
-&tolang 1       &lt 2 A  &mt LALT R  &mt LGUI S  &mt LCTRL T    &kp G                                      &kp M  &mt RCTRL N  &mt RGUI E  &mt RALT I     &lt 2 O  &none
+&tog_lang 1     &lt 2 A  &mt LALT R  &mt LGUI S  &mt LCTRL T    &kp G                                      &kp M  &mt RCTRL N  &mt RGUI E  &mt RALT I     &lt 0 O  &none
 &kp LEFT_ARROW  &none    &kp X       &kp C       &kp D          &kp V                                      &kp K  &kp H        &kp Z       &kp Q          &none    &kp RIGHT_ARROW
-                         &kp LG(C)   &kp LG(V)   &kp BACKSPACE  &mo 2  &mt LSHFT SPACE    &mt RSHFT ENTER  &mo 2  &kp DELETE   &kp LG(Z)   &kp LS(LG(Z))
+                         &kp LG(C)   &kp LG(V)   &kp BACKSPACE  &mo 0  &mt LSHFT SPACE    &mt RSHFT ENTER  &mo 0  &kp DELETE   &kp LG(Z)   &kp LS(LG(Z))
             >;
 
             display-name = "Base";
@@ -80,18 +110,9 @@
             display-name = "Ru";
             bindings = <
 &trans     &kp RU_CYRILLIC_TSE  &kp RU_CYRILLIC_SHA            &kp RU_CYRILLIC_EF           &kp RU_CYRILLIC_ER          &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_EL          &kp RU_CYRILLIC_I          &kp RU_CYRILLIC_U                    &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_HARD_SIGN
-&tolang 0  &lt 2 RU_CYRILLIC_A  &rumt LEFT_ALT RU_CYRILLIC_YA  &rumt LGUI RU_CYRILLIC_YERU  &rumt LCTRL RU_CYRILLIC_TE  &kp RU_CYRILLIC_GHE                    &kp RU_CYRILLIC_EM   &rumt RCTRL RU_CYRILLIC_PE  &rumt RGUI RU_CYRILLIC_IE  &rumt RIGHT_ALT RU_CYRILLIC_SHORT_I  &lt 2 RU_CYRILLIC_O        &kp RU_CYRILLIC_E
+&tolang 0  &lt 0 RU_CYRILLIC_A  &rumt LEFT_ALT RU_CYRILLIC_YA  &rumt LGUI RU_CYRILLIC_YERU  &rumt LCTRL RU_CYRILLIC_TE  &kp RU_CYRILLIC_GHE                    &kp RU_CYRILLIC_EM   &rumt RCTRL RU_CYRILLIC_PE  &rumt RGUI RU_CYRILLIC_IE  &rumt RIGHT_ALT RU_CYRILLIC_SHORT_I  &lt 0 RU_CYRILLIC_O        &kp RU_CYRILLIC_E
 &trans     &kp RU_CYRILLIC_CHE  &kp RU_CYRILLIC_HA             &kp RU_CYRILLIC_ES           &kp RU_CYRILLIC_DE          &kp RU_CYRILLIC_VE                     &kp RU_CYRILLIC_KA   &kp RU_CYRILLIC_EN          &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_YU                   &kp RU_CYRILLIC_SHCHA      &trans
-                                &trans                         &trans                       &trans                      &ruen 2              &trans    &trans  &ruen 2              &trans                      &trans                     &trans
-            >;
-        };
-
-        base {
-            bindings = <
-&none  &none  &none     &none     &none      &none                    &none  &none      &none     &none     &none  &none
-&none  &mo 3  &kp LALT  &kp LGUI  &kp LCTRL  &none                    &none  &kp RCTRL  &kp RGUI  &kp RALT  &mo 4  &none
-&none  &none  &none     &none     &none      &none                    &none  &none      &none     &none     &none  &none
-              &none     &none     &trans     &mo 6  &trans    &trans  &mo 5  &trans     &none     &none
+                                &trans                         &trans                       &trans                      &ruen 0              &trans    &trans  &ruen 0              &trans                      &trans                     &trans
             >;
         };
 
@@ -116,7 +137,7 @@
         fn {
             bindings = <
 &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans                    &trans  &trans  &trans  &trans  &mo 5   &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
                 &trans   &trans   &trans   &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
@@ -125,7 +146,7 @@
         arrow {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &kp RC(LEFT)  &repit DOWN     &repit UP    &kp RC(RIGHT)   &trans  &trans
-&trans  &mo 6   &trans  &trans  &trans  &trans                    &kp LEFT      &mt RCTRL DOWN  &mt RCMD UP  &mt RALT RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT      &mt RCTRL DOWN  &mt RCMD UP  &mt RALT RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &kp HOME      &kp PAGE_DOWN   &kp PAGE_UP  &kp END         &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans          &trans       &trans
             >;
