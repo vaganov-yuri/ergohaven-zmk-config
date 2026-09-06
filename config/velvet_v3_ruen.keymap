@@ -123,10 +123,10 @@
 
         en {
             bindings = <
-&to 0           &none    &kp W       &kp F       &kp P          &kp B                                                &kp J  &kp L       &kp U      &kp Y          &none    &none
-&none           &lt 4 A  &mt LALT R  &mt LGUI S  &mt LCTRL T    &kp G                                                &kp M  &my_n       &my_e      &my_i          &lt 5 O  &none
-&kp LEFT_ARROW  &none    &kp X       &kp C       &kp D          &kp V                                                &kp K  &kp H       &kp Z      &kp Q          &none    &kp RIGHT_ARROW
-                         &kp LG(C)   &kp LG(V)   &kp BACKSPACE  &lt_en_lang 3 1  &mt LSHFT SPACE    &mt RSHFT ENTER  &mo 2  &kp DELETE  &kp LG(Z)  &kp LS(LG(Z))
+&to 0           &none    &kp W       &kp F       &kp P        &kp B                                                &kp J  &kp L     &kp U      &kp Y          &none    &none
+&none           &lt 4 A  &mt LALT R  &mt LGUI S  &mt LCTRL T  &kp G                                                &kp M  &my_n     &my_e      &my_i          &lt 5 O  &none
+&kp LEFT_ARROW  &none    &kp X       &kp C       &kp D        &kp V                                                &kp K  &kp H     &kp Z      &kp Q          &none    &kp RIGHT_ARROW
+                         &kp LG(C)   &kp LG(V)   &kp DELETE   &lt_en_lang 3 1  &mt LSHFT SPACE    &mt RSHFT ENTER  &mo 2  &kp BSPC  &kp LG(Z)  &kp LS(LG(Z))
             >;
 
             display-name = "Base";
