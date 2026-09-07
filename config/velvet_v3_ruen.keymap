@@ -260,7 +260,9 @@
             label = "MY_RU_SHORT_I";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt_ru RALT RU_CYRILLIC_SHORT_I>, <&kp RU_CYRILLIC_SHORT_I>;
+            bindings =
+                <&mt_ru RALT RU_CYRILLIC_SHORT_I>,
+                <&kp RU_CYRILLIC_SHORT_I>;
         };
 
         my_ru_o: my_ru_o {
@@ -272,6 +274,7 @@
         };
 
         // --- SPEC Слой Tap-Dance ---
+
         my_spec_lt: my_spec_lt {
             compatible = "zmk,behavior-tap-dance";
             label = "MY_SPEC_LT";
@@ -280,39 +283,8 @@
             bindings = <&lt 4 LT>, <&kp LT>;
         };
 
-        my_spec_cprev: my_spec_cprev {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MY_SPEC_CPREV";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&mt RCTRL C_PREV>, <&kp C_PREV>;
-        };
-
-        my_spec_cpp: my_spec_cpp {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MY_SPEC_CPP";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&mt RGUI C_PP>, <&kp C_PP>;
-        };
-
-        my_spec_cnext: my_spec_cnext {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MY_SPEC_CNEXT";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&mt RALT C_NEXT>, <&kp C_NEXT>;
-        };
-
-        my_spec_pscrn: my_spec_pscrn {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MY_SPEC_PSCRN";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&lt 5 PSCRN>, <&kp PSCRN>;
-        };
-
         // --- FN Слой Tap-Dance ---
+
         my_fn_tab: my_fn_tab {
             compatible = "zmk,behavior-tap-dance";
             label = "MY_FN_TAB";
@@ -395,28 +367,28 @@
         ru {
             display-name = "Ru";
             bindings = <
-&trans  &kp RU_CYRILLIC_TSE  &kp RU_CYRILLIC_SHA         &kp RU_CYRILLIC_EF            &kp RU_CYRILLIC_ER           &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_EL           &kp RU_CYRILLIC_I           &kp RU_CYRILLIC_U                &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_HARD_SIGN
-&trans  &lt 4 RU_CYRILLIC_A  &mt_ru LALT RU_CYRILLIC_YA  &mt_ru LGUI RU_CYRILLIC_YERU  &mt_ru LCTRL RU_CYRILLIC_TE  &kp RU_CYRILLIC_GHE                    &kp RU_CYRILLIC_EM   &mt_ru RCTRL RU_CYRILLIC_PE  &mt_ru RGUI RU_CYRILLIC_IE  &mt_ru RALT RU_CYRILLIC_SHORT_I  &lt 5 RU_CYRILLIC_O        &kp RU_CYRILLIC_E
-&trans  &kp RU_CYRILLIC_CHE  &kp RU_CYRILLIC_HA          &kp RU_CYRILLIC_ES            &kp RU_CYRILLIC_DE           &kp RU_CYRILLIC_VE                     &kp RU_CYRILLIC_KA   &kp RU_CYRILLIC_EN           &kp RU_CYRILLIC_ZE          &kp RU_CYRILLIC_YU               &kp RU_CYRILLIC_SHCHA      &trans
-                             &trans                      &trans                        &trans                       &lt_ru_lang 3 0      &trans    &trans  &ru_mo_to 2 0        &trans                       &trans                      &trans
+&trans  &kp RU_CYRILLIC_TSE  &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_EF  &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_EL  &kp RU_CYRILLIC_I   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_HARD_SIGN
+&trans  &my_ru_a             &my_ru_ya            &my_ru_yeru         &my_ru_te           &kp RU_CYRILLIC_GHE                    &kp RU_CYRILLIC_EM   &my_ru_pe           &my_ru_ie           &my_ru_short_i      &my_ru_o                   &kp RU_CYRILLIC_E
+&trans  &kp RU_CYRILLIC_CHE  &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_DE  &kp RU_CYRILLIC_VE                     &kp RU_CYRILLIC_KA   &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_ZE  &kp RU_CYRILLIC_YU  &kp RU_CYRILLIC_SHCHA      &trans
+                             &trans               &trans              &trans              &lt_ru_lang 3 0      &trans    &trans  &ru_mo_to 2 0        &trans              &trans              &trans
             >;
         };
 
         spec {
             bindings = <
-&trans  &kp GT    &kp RBKT   &kp RPAR   &kp RBRC  &kp DQT                      &trans        &kp K_VOL_DN      &kp K_VOL_UP   &kp C_MUTE       &trans          &trans
-&trans  &lt 4 LT  &kp LBKT   &kp LPAR   &kp LBRC  &kp APOS                     &out OUT_USB  &mt RCTRL C_PREV  &mt RGUI C_PP  &mt RALT C_NEXT  &lt 5 PSCRN     &trans
-&trans  &kp AT    &kp UNDER  &kp PRCNT  &kp DLLR  &kp GRAVE                    &out OUT_BLE  &bt BT_SEL 0      &bt BT_SEL 1   &bt BT_SEL 2     &bt BT_CLR_ALL  &trans
-                  &trans     &trans     &trans    &mo 3      &trans    &trans  &trans        &trans            &trans         &trans
+&trans  &kp GT       &kp RBKT   &kp RPAR   &kp RBRC  &kp DQT                      &trans        &kp K_VOL_DN      &kp K_VOL_UP   &kp C_MUTE       &trans          &trans
+&trans  &my_spec_lt  &kp LBKT   &kp LPAR   &kp LBRC  &kp APOS                     &out OUT_USB  &mt RCTRL C_PREV  &mt RGUI C_PP  &mt RALT C_NEXT  &lt 5 PSCRN     &trans
+&trans  &kp AT       &kp UNDER  &kp PRCNT  &kp DLLR  &kp GRAVE                    &out OUT_BLE  &bt BT_SEL 0      &bt BT_SEL 1   &bt BT_SEL 2     &bt BT_CLR_ALL  &trans
+                     &trans     &trans     &trans    &mo 3      &trans    &trans  &mo 2         &trans            &trans         &trans
             >;
         };
 
         fn {
             bindings = <
-&trans  &kp ESC    &kp F7       &kp F8       &kp F9        &kp F10                    &kp CARET  &kp MINUS      &kp PLUS        &kp EQUAL       &kp ASTRK   &trans
-&trans  &lt 4 TAB  &mt LALT F4  &mt LGUI F5  &mt LCTRL F6  &kp F11                    &kp FSLH   &mt RCTRL DOT  &mt RGUI COMMA  &mt RALT COLON  &lt 5 SEMI  &kp NUBS
-&trans  &trans     &kp F1       &kp F2       &kp F3        &kp F12                    &kp HASH   &kp EXCL       &kp QMARK       &kp AMPS        &kp PIPE    &trans
-                   &trans       &trans       &trans        &mo 3    &trans    &trans  &trans     &trans         &trans          &trans
+&trans  &kp ESC     &kp F7     &kp F8     &kp F9     &kp F10                    &kp CARET  &kp MINUS   &kp PLUS      &kp EQUAL     &kp ASTRK    &trans
+&trans  &my_fn_tab  &my_fn_f4  &my_fn_f5  &my_fn_f6  &kp F11                    &kp FSLH   &my_fn_dot  &my_fn_comma  &my_fn_colon  &my_fn_semi  &kp NUBS
+&trans  &trans      &kp F1     &kp F2     &kp F3     &kp F12                    &kp HASH   &kp EXCL    &kp QMARK     &kp AMPS      &kp PIPE     &trans
+                    &trans     &trans     &trans     &mo 3    &trans    &trans  &mo 2      &trans      &trans        &trans
             >;
         };
 
