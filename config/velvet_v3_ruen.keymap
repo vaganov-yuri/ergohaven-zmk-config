@@ -58,6 +58,13 @@
 
             label = "MO_RU";
         };
+
+        kp_double: kp_double {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "KP_DOUBLE";
+        };
     };
 
     behaviors {
@@ -66,14 +73,14 @@
             label = "MY_N";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt RCTRL N>, <&kp N>;
+            bindings = <&mt RCTRL N>, <&kp_double N>;
         };
 
         my_e: my_e {
             compatible = "zmk,behavior-tap-dance";
             label = "MY_E";
             #binding-cells = <0>;
-            bindings = <&mt RIGHT_GUI E>, <&kp E>;
+            bindings = <&mt RIGHT_GUI E>, <&kp_double E>;
 
             tapping-term-ms = <300>;
         };
@@ -82,7 +89,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MY_I";
             #binding-cells = <0>;
-            bindings = <&mt RIGHT_ALT I>, <&kp I>;
+            bindings = <&mt RIGHT_ALT I>, <&kp_double I>;
 
             tapping-term-ms = <300>;
         };
@@ -94,7 +101,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
         };
 
         mt_ru: mt_ru {
@@ -114,7 +121,90 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
+        };
+
+        my_o: my_o {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MY_O";
+            #binding-cells = <0>;
+            bindings = <&lt 5 O>, <&kp_double O>;
+
+            tapping-term-ms = <300>;
+        };
+
+        my_a: my_a {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MY_A";
+            #binding-cells = <0>;
+            bindings = <&lt 4 A>, <&kp_double A>;
+
+            tapping-term-ms = <300>;
+        };
+
+        my_r: my_r {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MY_R";
+            #binding-cells = <0>;
+            bindings = <&mt LALT R>, <&kp_double R>;
+
+            tapping-term-ms = <300>;
+        };
+
+        my_s: my_s {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MY_S";
+            #binding-cells = <0>;
+            bindings = <&mt LGUI S>, <&kp_double S>;
+
+            tapping-term-ms = <300>;
+        };
+
+        my_t: my_t {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MY_T";
+            #binding-cells = <0>;
+            bindings = <&mt LCTRL T>, <&kp_double T>;
+
+            tapping-term-ms = <300>;
+        };
+
+        my_space: my_space {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MY_SPACE";
+            #binding-cells = <0>;
+            bindings = <&mt LSHFT SPACE>, <&kp_double SPACE>;
+
+            tapping-term-ms = <300>;
+        };
+
+        my_enter: my_enter {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MY_ENTER";
+            #binding-cells = <0>;
+            bindings = <&mt LSHFT ENTER>, <&kp_double ENTER>;
+
+            tapping-term-ms = <300>;
+        };
+
+        mo_to: mo_to {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_TO";
+            bindings = <&mo>, <&to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "hold-preferred";
+        };
+
+        ru_mo_to: ru_mo_to {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RU_MO_TO";
+            bindings = <&mo_ru>, <&to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "hold-preferred";
         };
     };
 
@@ -123,10 +213,10 @@
 
         en {
             bindings = <
-&to 0           &none    &kp W       &kp F       &kp P        &kp B                                                &kp J  &kp L     &kp U      &kp Y          &none    &none
-&none           &lt 4 A  &mt LALT R  &mt LGUI S  &mt LCTRL T  &kp G                                                &kp M  &my_n     &my_e      &my_i          &lt 5 O  &none
-&kp LEFT_ARROW  &none    &kp X       &kp C       &kp D        &kp V                                                &kp K  &kp H     &kp Z      &kp Q          &none    &kp RIGHT_ARROW
-                         &kp LG(C)   &kp LG(V)   &kp DELETE   &lt_en_lang 3 1  &mt LSHFT SPACE    &mt RSHFT ENTER  &mo 2  &kp BSPC  &kp LG(Z)  &kp LS(LG(Z))
+&to 0           &none  &kp W      &kp F      &kp P       &kp B                                    &kp J       &kp L     &kp U      &kp Y          &none  &none
+&none           &my_a  &my_r      &my_s      &my_t       &kp G                                    &kp M       &my_n     &my_e      &my_i          &my_o  &none
+&kp LEFT_ARROW  &none  &kp X      &kp C      &kp D       &kp V                                    &kp K       &kp H     &kp Z      &kp Q          &none  &kp RIGHT_ARROW
+                       &kp LG(C)  &kp LG(V)  &kp DELETE  &lt_en_lang 3 1  &my_space    &my_enter  &mo_to 2 0  &kp BSPC  &kp LG(Z)  &kp LS(LG(Z))
             >;
 
             display-name = "Base";
@@ -138,7 +228,7 @@
 &trans  &kp RU_CYRILLIC_TSE  &kp RU_CYRILLIC_SHA         &kp RU_CYRILLIC_EF            &kp RU_CYRILLIC_ER           &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_EL           &kp RU_CYRILLIC_I           &kp RU_CYRILLIC_U                &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_HARD_SIGN
 &trans  &lt 4 RU_CYRILLIC_A  &mt_ru LALT RU_CYRILLIC_YA  &mt_ru LGUI RU_CYRILLIC_YERU  &mt_ru LCTRL RU_CYRILLIC_TE  &kp RU_CYRILLIC_GHE                    &kp RU_CYRILLIC_EM   &mt_ru RCTRL RU_CYRILLIC_PE  &mt_ru RGUI RU_CYRILLIC_IE  &mt_ru RALT RU_CYRILLIC_SHORT_I  &lt 5 RU_CYRILLIC_O        &kp RU_CYRILLIC_E
 &trans  &kp RU_CYRILLIC_CHE  &kp RU_CYRILLIC_HA          &kp RU_CYRILLIC_ES            &kp RU_CYRILLIC_DE           &kp RU_CYRILLIC_VE                     &kp RU_CYRILLIC_KA   &kp RU_CYRILLIC_EN           &kp RU_CYRILLIC_ZE          &kp RU_CYRILLIC_YU               &kp RU_CYRILLIC_SHCHA      &trans
-                             &trans                      &trans                        &trans                       &lt_ru_lang 3 0      &trans    &trans  &mo_ru 2             &trans                       &trans                      &trans
+                             &trans                      &trans                        &trans                       &lt_ru_lang 3 0      &trans    &trans  &ru_mo_to 2 0        &trans                       &trans                      &trans
             >;
         };
 
