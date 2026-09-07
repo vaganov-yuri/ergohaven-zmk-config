@@ -62,7 +62,15 @@
         kp_double: kp_double {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings =
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
             label = "KP_DOUBLE";
         };
     };
@@ -199,6 +207,7 @@
         };
 
         // --- RU Слой ---
+
         my_ru_a: my_ru_a {
             compatible = "zmk,behavior-tap-dance";
             label = "MY_RU_A";
@@ -212,7 +221,9 @@
             label = "MY_RU_YA";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt_ru LALT RU_CYRILLIC_YA>, <&kp_double RU_CYRILLIC_YA>;
+            bindings =
+                <&mt_ru LALT RU_CYRILLIC_YA>,
+                <&kp_double RU_CYRILLIC_YA>;
         };
 
         my_ru_yeru: my_ru_yeru {
@@ -220,7 +231,9 @@
             label = "MY_RU_YERU";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt_ru LGUI RU_CYRILLIC_YERU>, <&kp_double RU_CYRILLIC_YERU>;
+            bindings =
+                <&mt_ru LGUI RU_CYRILLIC_YERU>,
+                <&kp_double RU_CYRILLIC_YERU>;
         };
 
         my_ru_te: my_ru_te {
@@ -228,7 +241,9 @@
             label = "MY_RU_TE";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt_ru LCTRL RU_CYRILLIC_TE>, <&kp_double RU_CYRILLIC_TE>;
+            bindings =
+                <&mt_ru LCTRL RU_CYRILLIC_TE>,
+                <&kp_double RU_CYRILLIC_TE>;
         };
 
         my_ru_pe: my_ru_pe {
@@ -236,7 +251,9 @@
             label = "MY_RU_PE";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt_ru RCTRL RU_CYRILLIC_PE>, <&kp_double RU_CYRILLIC_PE>;
+            bindings =
+                <&mt_ru RCTRL RU_CYRILLIC_PE>,
+                <&kp_double RU_CYRILLIC_PE>;
         };
 
         my_ru_ie: my_ru_ie {
@@ -244,7 +261,9 @@
             label = "MY_RU_IE";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt_ru RGUI RU_CYRILLIC_IE>, <&kp_double RU_CYRILLIC_IE>;
+            bindings =
+                <&mt_ru RGUI RU_CYRILLIC_IE>,
+                <&kp_double RU_CYRILLIC_IE>;
         };
 
         my_ru_short_i: my_ru_short_i {
@@ -252,7 +271,9 @@
             label = "MY_RU_SHORT_I";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt_ru RALT RU_CYRILLIC_SHORT_I>, <&kp_double RU_CYRILLIC_SHORT_I>;
+            bindings =
+                <&mt_ru RALT RU_CYRILLIC_SHORT_I>,
+                <&kp_double RU_CYRILLIC_SHORT_I>;
         };
 
         my_ru_o: my_ru_o {
@@ -264,6 +285,7 @@
         };
 
         // --- SPEC Слой ---
+
         my_spec_lt: my_spec_lt {
             compatible = "zmk,behavior-tap-dance";
             label = "MY_SPEC_LT";
@@ -272,39 +294,8 @@
             bindings = <&lt 4 LT>, <&kp_double LT>;
         };
 
-        my_spec_cprev: my_spec_cprev {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MY_SPEC_CPREV";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&mt RCTRL C_PREV>, <&kp_double C_PREV>;
-        };
-
-        my_spec_cpp: my_spec_cpp {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MY_SPEC_CPP";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&mt RGUI C_PP>, <&kp_double C_PP>;
-        };
-
-        my_spec_cnext: my_spec_cnext {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MY_SPEC_CNEXT";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&mt RALT C_NEXT>, <&kp_double C_NEXT>;
-        };
-
-        my_spec_pscrn: my_spec_pscrn {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MY_SPEC_PSCRN";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&lt 5 PSCRN>, <&kp_double PSCRN>;
-        };
-
         // --- FN Слой ---
+
         my_fn_tab: my_fn_tab {
             compatible = "zmk,behavior-tap-dance";
             label = "MY_FN_TAB";
