@@ -98,6 +98,26 @@
             flavor = "hold-preferred";
         };
 
+        mo_to: mo_to {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_TO";
+            bindings = <&mo>, <&to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "hold-preferred";
+        };
+
+        ru_mo_to: ru_mo_to {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RU_MO_TO";
+            bindings = <&mo_ru>, <&to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "hold-preferred";
+        };
+
         my_n: my_n {
             compatible = "zmk,behavior-tap-dance";
             label = "MY_N";
