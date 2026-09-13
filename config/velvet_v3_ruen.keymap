@@ -128,7 +128,7 @@
             label = "MY_N";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt RCTRL N>, <&kp_double N>;
+            bindings = <&mt RGUI N>, <&kp_double N>;
         };
 
         my_e: my_e {
@@ -136,7 +136,7 @@
             label = "MY_E";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt RIGHT_GUI E>, <&kp_double E>;
+            bindings = <&mt RCTRL E>, <&kp_double E>;
         };
 
         my_i: my_i {
@@ -176,7 +176,7 @@
             label = "MY_S";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt LGUI S>, <&kp_double S>;
+            bindings = <&mt LCTRL S>, <&kp_double S>;
         };
 
         my_t: my_t {
@@ -184,7 +184,7 @@
             label = "MY_T";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt LCTRL T>, <&kp_double T>;
+            bindings = <&mt LGUI T>, <&kp_double T>;
         };
 
         my_space: my_space {
@@ -192,7 +192,7 @@
             label = "MY_SPACE";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt LSHFT SPACE>, <&kp_double SPACE>;
+            bindings = <&mt_hold LSHFT SPACE>, <&kp_double SPACE>;
         };
 
         my_enter: my_enter {
@@ -200,7 +200,7 @@
             label = "MY_ENTER";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt LSHFT ENTER>, <&kp_double ENTER>;
+            bindings = <&mt_hold LSHFT ENTER>, <&kp_double ENTER>;
         };
 
         // --- RU Слой ---
@@ -229,7 +229,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings =
-                <&mt_ru LGUI RU_CYRILLIC_YERU>,
+                <&mt_ru LCTRL RU_CYRILLIC_YERU>,
                 <&kp_double RU_CYRILLIC_YERU>;
         };
 
@@ -239,7 +239,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings =
-                <&mt_ru LCTRL RU_CYRILLIC_TE>,
+                <&mt_ru LGUI RU_CYRILLIC_TE>,
                 <&kp_double RU_CYRILLIC_TE>;
         };
 
@@ -249,7 +249,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings =
-                <&mt_ru RCTRL RU_CYRILLIC_PE>,
+                <&mt_ru RGUI RU_CYRILLIC_PE>,
                 <&kp_double RU_CYRILLIC_PE>;
         };
 
@@ -259,7 +259,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings =
-                <&mt_ru RGUI RU_CYRILLIC_IE>,
+                <&mt_ru RCTRL RU_CYRILLIC_IE>,
                 <&kp_double RU_CYRILLIC_IE>;
         };
 
@@ -314,7 +314,7 @@
             label = "MY_FN_F5";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt LGUI F5>, <&kp_double F5>;
+            bindings = <&mt LCTRL F5>, <&kp_double F5>;
         };
 
         my_fn_f6: my_fn_f6 {
@@ -322,7 +322,7 @@
             label = "MY_FN_F6";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt LCTRL F6>, <&kp_double F6>;
+            bindings = <&mt LGUI F6>, <&kp_double F6>;
         };
 
         my_fn_dot: my_fn_dot {
@@ -330,7 +330,7 @@
             label = "MY_FN_DOT";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt RCTRL DOT>, <&kp_double DOT>;
+            bindings = <&mt RGUI DOT>, <&kp_double DOT>;
         };
 
         my_fn_comma: my_fn_comma {
@@ -338,7 +338,7 @@
             label = "MY_FN_COMMA";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt RGUI COMMA>, <&kp_double COMMA>;
+            bindings = <&mt RCTRL COMMA>, <&kp_double COMMA>;
         };
 
         my_fn_colon: my_fn_colon {
@@ -355,6 +355,15 @@
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&lt 5 SEMI>, <&kp_double SEMI>;
+        };
+
+        mt_hold: mt_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_HOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
         };
     };
 
@@ -384,10 +393,10 @@
 
         spec {
             bindings = <
-&trans  &kp GT       &kp RBKT   &kp RPAR   &kp RBRC  &kp DQT                      &trans        &kp K_VOL_DN      &kp K_VOL_UP   &kp C_MUTE       &trans          &trans
-&trans  &my_spec_lt  &kp LBKT   &kp LPAR   &kp LBRC  &kp APOS                     &out OUT_USB  &mt RCTRL C_PREV  &mt RGUI C_PP  &mt RALT C_NEXT  &lt 5 PSCRN     &trans
-&trans  &kp AT       &kp UNDER  &kp PRCNT  &kp DLLR  &kp GRAVE                    &out OUT_BLE  &bt BT_SEL 0      &bt BT_SEL 1   &bt BT_SEL 2     &bt BT_CLR_ALL  &trans
-                     &trans     &trans     &trans    &mo 3      &trans    &trans  &mo 2         &trans            &trans         &trans
+&trans  &kp GT       &kp RBKT   &kp RPAR   &kp RBRC  &kp DQT                      &trans        &kp K_VOL_DN     &kp K_VOL_UP    &kp C_MUTE       &trans          &trans
+&trans  &my_spec_lt  &kp LBKT   &kp LPAR   &kp LBRC  &kp APOS                     &out OUT_USB  &mt RGUI C_PREV  &mt RCTRL C_PP  &mt RALT C_NEXT  &lt 5 PSCRN     &trans
+&trans  &kp AT       &kp UNDER  &kp PRCNT  &kp DLLR  &kp GRAVE                    &out OUT_BLE  &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_CLR_ALL  &trans
+                     &trans     &trans     &trans    &mo 3      &trans    &trans  &mo 2         &trans           &trans          &trans
             >;
         };
 
