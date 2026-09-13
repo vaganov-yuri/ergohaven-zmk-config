@@ -79,7 +79,7 @@
             bindings = <&mo>, <&to_lang>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             flavor = "hold-preferred";
         };
 
@@ -89,7 +89,7 @@
             bindings = <&hold_lang>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
