@@ -402,10 +402,10 @@
 
         fn {
             bindings = <
-&trans  &kp ESC     &kp F7     &kp F8     &kp F9     &kp F10                    &kp CARET  &kp MINUS   &kp PLUS      &kp EQUAL     &kp ASTRK    &trans
-&trans  &my_fn_tab  &my_fn_f4  &my_fn_f5  &my_fn_f6  &kp F11                    &kp FSLH   &my_fn_dot  &my_fn_comma  &my_fn_colon  &my_fn_semi  &kp NUBS
-&trans  &trans      &kp F1     &kp F2     &kp F3     &kp F12                    &kp HASH   &kp EXCL    &kp QMARK     &kp AMPS      &kp PIPE     &trans
-                    &trans     &trans     &trans     &mo 3    &trans    &trans  &mo 2      &trans      &trans        &trans
+&trans  &kp ESC    &kp F7       &kp F8        &kp F9       &kp F10                    &kp CARET  &kp MINUS     &kp PLUS         &kp EQUAL       &kp ASTRK   &trans
+&trans  &lt 4 TAB  &mt LALT F4  &mt LCTRL F5  &mt LGUI F6  &kp F11                    &kp FSLH   &mt RGUI DOT  &mt RCTRL COMMA  &mt RALT COLON  &lt 5 SEMI  &kp NUBS
+&trans  &trans     &kp F1       &kp F2        &kp F3       &kp F12                    &kp HASH   &kp EXCL      &kp QMARK        &kp AMPS        &kp PIPE    &trans
+                   &trans       &trans        &trans       &mo 3    &trans    &trans  &mo 2      &trans        &trans           &trans
             >;
         };
 
