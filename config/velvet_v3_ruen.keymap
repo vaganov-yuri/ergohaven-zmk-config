@@ -376,7 +376,7 @@
         en {
             bindings = <
 &to 0           &none    &kp W       &kp F        &kp P       &kp B                                                          &kp J       &kp L       &kp U        &kp Y          &none    &none
-&none           &lt 4 A  &mt LALT A  &mt LCTRL S  &mt LGUI T  &kp G                                                          &kp M       &mt RGUI N  &mt RCTRL E  &mt RALT I     &lt 5 O  &none
+&none           &lt 4 A  &mt LALT R  &mt LCTRL S  &mt LGUI T  &kp G                                                          &kp M       &mt RGUI N  &mt RCTRL E  &mt RALT I     &lt 5 O  &none
 &kp LEFT_ARROW  &none    &kp X       &kp C        &kp D       &kp V                                                          &kp K       &kp H       &kp Z        &kp Q          &none    &kp RIGHT_ARROW
                          &kp LC(C)   &kp LC(V)    &kp DELETE  &lt_en_lang 3 1  &mt_hold LSHFT SPACE    &mt_hold RSHFT ENTER  &mo_to 2 0  &kp BSPC    &kp RC(Z)    &kp LS(RC(Z))
             >;
