@@ -18,6 +18,8 @@
             #binding-cells = <0>;
             bindings = <&kp CAPS>;
             label = "KP_LANG";
+            wait-ms = <2>;
+            tap-ms = <2>;
         };
 
         to_lang: tog_lang {
@@ -25,6 +27,8 @@
             #binding-cells = <1>;
             bindings = <&kp_lang &macro_param_1to1 &to MACRO_PLACEHOLDER>;
             label = "TOG_LANG";
+            wait-ms = <2>;
+            tap-ms = <2>;
         };
 
         hold_lang: mt_lang {
@@ -41,6 +45,8 @@
                 <&to_lang 1>;
 
             label = "MT_LANG";
+            wait-ms = <2>;
+            tap-ms = <2>;
         };
 
         mo_ru: mo_ru {
@@ -57,6 +63,8 @@
                 <&to_lang 1>;
 
             label = "MO_RU";
+            wait-ms = <2>;
+            tap-ms = <2>;
         };
 
         kp_double: kp_double {
@@ -72,6 +80,8 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "KP_DOUBLE";
+            wait-ms = <2>;
+            tap-ms = <2>;
         };
     };
 
