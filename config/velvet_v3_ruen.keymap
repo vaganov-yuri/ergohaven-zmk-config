@@ -86,10 +86,10 @@
     };
 
     behaviors {
-        lt_en_lang: lt_en_lang {
+        lt_en: lt_en {
             compatible = "zmk,behavior-hold-tap";
-            label = "LT_EN_LANG";
-            bindings = <&mo>, <&to_lang>;
+            label = "LT_EN";
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -106,10 +106,10 @@
             flavor = "tap-preferred";
         };
 
-        lt_ru_lang: lt_ru_lang {
+        lt_ru: lt_ru {
             compatible = "zmk,behavior-hold-tap";
-            label = "LT_RU_LANG";
-            bindings = <&mo_ru>, <&to_lang>;
+            label = "LT_RU";
+            bindings = <&mo_ru>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -385,10 +385,10 @@
 
         en {
             bindings = <
-&to 0           &none    &kp W       &kp F        &kp P       &kp B                                                          &kp J       &kp L       &kp U        &kp Y          &none    &none
-&none           &lt 4 A  &mt LALT R  &mt LCTRL S  &mt LGUI T  &kp G                                                          &kp M       &mt RGUI N  &mt RCTRL E  &mt RALT I     &lt 5 O  &none
-&kp LEFT_ARROW  &none    &kp X       &kp C        &kp D       &kp V                                                          &kp K       &kp H       &kp Z        &kp Q          &none    &kp RIGHT_ARROW
-                         &kp LC(C)   &kp LC(V)    &kp DELETE  &lt_en_lang 3 1  &mt_hold LSHFT SPACE    &mt_hold RSHFT ENTER  &mo_to 2 0  &kp BSPC    &kp RC(Z)    &kp LS(RC(Z))
+&to 0           &none    &kp W       &kp F        &kp P       &kp B                                                       &kp J      &kp L       &kp U        &kp Y          &none    &none
+&to 1           &lt 4 A  &mt LALT R  &mt LCTRL S  &mt LGUI T  &kp G                                                       &kp M      &mt RGUI N  &mt RCTRL E  &mt RALT I     &lt 5 O  &none
+&kp LEFT_ARROW  &none    &kp X       &kp C        &kp D       &kp V                                                       &kp K      &kp H       &kp Z        &kp Q          &none    &kp RIGHT_ARROW
+                         &kp LC(C)   &kp LC(V)    &kp DELETE  &lt_en 3 TAB  &mt_hold LSHFT SPACE    &mt_hold RSHFT ENTER  &lt 2 ESC  &kp BSPC    &kp RC(Z)    &kp LS(RC(Z))
             >;
 
             display-name = "Base";
@@ -398,27 +398,27 @@
             display-name = "Ru";
             bindings = <
 &trans  &kp RU_CYRILLIC_TSE  &kp RU_CYRILLIC_SHA         &kp RU_CYRILLIC_EF             &kp RU_CYRILLIC_ER          &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_EL          &kp RU_CYRILLIC_I            &kp RU_CYRILLIC_U                &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_HARD_SIGN
-&trans  &lt 4 RU_CYRILLIC_A  &mt_ru LALT RU_CYRILLIC_YA  &mt_ru LCTRL RU_CYRILLIC_YERU  &mt_ru LGUI RU_CYRILLIC_TE  &kp RU_CYRILLIC_GHE                    &kp RU_CYRILLIC_EM   &mt_ru RGUI RU_CYRILLIC_PE  &mt_ru RCTRL RU_CYRILLIC_IE  &mt_ru RALT RU_CYRILLIC_SHORT_I  &lt 5 RU_CYRILLIC_O        &kp RU_CYRILLIC_E
+&to 0   &lt 4 RU_CYRILLIC_A  &mt_ru LALT RU_CYRILLIC_YA  &mt_ru LCTRL RU_CYRILLIC_YERU  &mt_ru LGUI RU_CYRILLIC_TE  &kp RU_CYRILLIC_GHE                    &kp RU_CYRILLIC_EM   &mt_ru RGUI RU_CYRILLIC_PE  &mt_ru RCTRL RU_CYRILLIC_IE  &mt_ru RALT RU_CYRILLIC_SHORT_I  &lt 5 RU_CYRILLIC_O        &kp RU_CYRILLIC_E
 &trans  &kp RU_CYRILLIC_CHE  &kp RU_CYRILLIC_HA          &kp RU_CYRILLIC_ES             &kp RU_CYRILLIC_DE          &kp RU_CYRILLIC_VE                     &kp RU_CYRILLIC_KA   &kp RU_CYRILLIC_EN          &kp RU_CYRILLIC_ZE           &kp RU_CYRILLIC_YU               &kp RU_CYRILLIC_SHCHA      &trans
-                             &trans                      &trans                         &trans                      &lt_ru_lang 3 0      &trans    &trans  &ru_mo_to 2 0        &trans                      &trans                       &trans
+                             &trans                      &trans                         &trans                      &lt_ru 3 TAB         &trans    &trans  &lt_ru 2 ESC         &trans                      &trans                       &trans
             >;
         };
 
         spec {
             bindings = <
-&trans  &kp GT    &kp RBKT   &kp RPAR   &kp RBRC  &kp DQT                      &trans        &kp K_VOL_DN     &kp K_VOL_UP    &kp C_MUTE       &trans          &trans
-&trans  &lt 4 LT  &kp LBKT   &kp LPAR   &kp LBRC  &kp APOS                     &out OUT_USB  &mt RGUI C_PREV  &mt RCTRL C_PP  &mt RALT C_NEXT  &lt 5 PSCRN     &trans
-&trans  &kp AT    &kp UNDER  &kp PRCNT  &kp DLLR  &kp GRAVE                    &out OUT_BLE  &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_CLR_ALL  &trans
-                  &trans     &trans     &trans    &mo 3      &trans    &trans  &mo 2         &trans           &trans          &trans
+&trans     &kp GT    &kp RBKT   &kp RPAR   &kp RBRC  &kp DQT                      &trans        &kp K_VOL_DN     &kp K_VOL_UP    &kp C_MUTE       &trans          &trans
+&kp TILDE  &lt 4 LT  &kp LBKT   &kp LPAR   &kp LBRC  &kp APOS                     &out OUT_USB  &mt RGUI C_PREV  &mt RCTRL C_PP  &mt RALT C_NEXT  &lt 5 PSCRN     &trans
+&trans     &kp AT    &kp UNDER  &kp PRCNT  &kp DLLR  &kp GRAVE                    &out OUT_BLE  &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_CLR_ALL  &trans
+                     &trans     &trans     &trans    &trans     &trans    &trans  &trans        &trans           &trans          &trans
             >;
         };
 
         fn {
             bindings = <
 &trans  &kp ESC    &kp F7       &kp F8        &kp F9       &kp F10                    &kp CARET  &kp MINUS     &kp PLUS         &kp EQUAL       &kp ASTRK   &trans
-&trans  &lt 4 TAB  &mt LALT F4  &mt LCTRL F5  &mt LGUI F6  &kp F11                    &kp FSLH   &mt RGUI DOT  &mt RCTRL COMMA  &mt RALT COLON  &lt 5 SEMI  &kp NUBS
+&none   &lt 4 TAB  &mt LALT F4  &mt LCTRL F5  &mt LGUI F6  &kp F11                    &kp FSLH   &mt RGUI DOT  &mt RCTRL COMMA  &mt RALT COLON  &lt 5 SEMI  &kp NUBS
 &trans  &trans     &kp F1       &kp F2        &kp F3       &kp F12                    &kp HASH   &kp EXCL      &kp QMARK        &kp AMPS        &kp PIPE    &trans
-                   &trans       &trans        &trans       &mo 3    &trans    &trans  &mo 2      &trans        &trans           &trans
+                   &trans       &trans        &trans       &trans   &trans    &trans  &trans     &trans        &trans           &trans
             >;
         };
 
