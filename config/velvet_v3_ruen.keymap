@@ -401,7 +401,7 @@
         en {
             bindings = <
 &trans      &none       &kp W       &kp F        &kp P        &kp B                        &kp J      &kp L        &kp U        &kp Y       &none       &none
-&to_lang 2  &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G                        &kp M      &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O  &none
+&to_lang 0  &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G                        &kp M      &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O  &none
 &trans      &none       &kp X       &kp C        &kp D        &kp V                        &kp K      &kp H        &kp Z        &kp Q       &none       &trans
                         &trans      &trans       &trans       &lt 3 TAB  &trans    &trans  &lt 2 ESC  &trans       &trans       &trans
             >;
