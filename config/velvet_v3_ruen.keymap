@@ -97,6 +97,8 @@
                 <&kp_lang>;
 
             label = "MO_LANG";
+            wait-ms = <2>;
+            tap-ms = <2>;
         };
     };
 
