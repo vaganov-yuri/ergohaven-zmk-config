@@ -420,7 +420,7 @@
 
         fn {
             bindings = <
-&trans  &kp ESC       &kp F7       &kp F8        &kp F9        &kp F10                    &kp CARET  &kp MINUS      &kp PLUS         &kp EQUAL       &kp ASTRK      &trans
+&trans  &trans        &kp F7       &kp F8        &kp F9        &kp F10                    &kp CARET  &kp MINUS      &kp PLUS         &kp EQUAL       &kp ASTRK      &trans
 &none   &mt LGUI TAB  &mt LALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp F11                    &kp FSLH   &mt RSHFT DOT  &mt RCTRL COMMA  &mt RALT COLON  &mt RGUI SEMI  &kp BSLH
 &trans  &trans        &kp F1       &kp F2        &kp F3        &kp F12                    &kp HASH   &kp EXCL       &kp QMARK        &kp AMPS        &kp PIPE       &trans
                       &trans       &trans        &trans        &trans   &trans    &trans  &trans     &trans         &trans           &trans
