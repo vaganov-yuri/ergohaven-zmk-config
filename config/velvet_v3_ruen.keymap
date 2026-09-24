@@ -30,7 +30,7 @@
         to_lang: tog_lang {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp_lang &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+            bindings = <&macro_param_1to1 &to MACRO_PLACEHOLDER &kp_lang>;
             label = "TOG_LANG";
             wait-ms = <2>;
             tap-ms = <2>;
@@ -402,18 +402,18 @@
         ru {
             display-name = "Ru";
             bindings = <
-&trans      &kp RU_CYRILLIC_TSE        &kp RU_CYRILLIC_SHA         &kp RU_CYRILLIC_EF             &kp RU_CYRILLIC_ER        &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_EL        &kp RU_CYRILLIC_I            &kp RU_CYRILLIC_U                &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_HARD_SIGN
+&trans      &kp RU_CYRILLIC_TSE        &kp RU_CYRILLIC_SHA         &kp RU_CYRILLIC_EF             &kp RU_CYRILLIC_ER        &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_EL        &kp RU_CYRILLIC_I            &kp RU_CYRILLIC_U                &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_HARD_SIGN
 &to_lang 0  &mt_ru LGUI RU_CYRILLIC_A  &mt_ru LALT RU_CYRILLIC_YA  &mt_ru LCTRL RU_CYRILLIC_YERU  &mt LSHFT RU_CYRILLIC_TE  &kp RU_CYRILLIC_GHE                    &kp RU_CYRILLIC_EM   &mt RSHFT RU_CYRILLIC_PE  &mt_ru RCTRL RU_CYRILLIC_IE  &mt_ru RALT RU_CYRILLIC_SHORT_I  &mt_ru RGUI RU_CYRILLIC_O  &kp RU_CYRILLIC_E
-&trans      &kp RU_CYRILLIC_CHE        &kp RU_CYRILLIC_HA          &kp RU_CYRILLIC_ES             &kp RU_CYRILLIC_DE        &kp RU_CYRILLIC_VE                     &kp RU_CYRILLIC_KA   &kp RU_CYRILLIC_EN        &kp RU_CYRILLIC_ZE           &kp RU_CYRILLIC_YU               &kp RU_CYRILLIC_SHCHA      &trans
+&trans      &kp RU_CYRILLIC_CHE        &kp RU_CYRILLIC_HA          &kp RU_CYRILLIC_ES             &kp RU_CYRILLIC_DE        &kp RU_CYRILLIC_VE                     &kp RU_CYRILLIC_KA   &kp RU_CYRILLIC_EN        &kp RU_CYRILLIC_ZE           &kp RU_CYRILLIC_YU               &kp RU_CYRILLIC_SOFT_SIGN  &trans
                                        &trans                      &trans                         &trans                    &lt_ru 3 TAB         &trans    &trans  &lt_ru 2 ESC         &trans                    &trans                       &trans
             >;
         };
 
         spec {
             bindings = <
-&trans     &kp GT  &kp RBKT   &kp RPAR   &kp RBRC  &kp DQT                      &trans        &kp K_VOL_DN  &kp K_VOL_UP    &kp C_MUTE       &trans          &trans
+&trans     &kp GT  &kp RBKT   &kp RPAR   &kp RBRC  &kp GRAVE                    &trans        &kp K_VOL_DN  &kp K_VOL_UP    &kp C_MUTE       &trans          &trans
 &kp TILDE  &kp LT  &kp LBKT   &kp LPAR   &kp LBRC  &kp APOS                     &out OUT_USB  &kp C_PREV    &mt RCTRL C_PP  &mt RALT C_NEXT  &mt RGUI PSCRN  &trans
-&trans     &kp AT  &kp UNDER  &kp PRCNT  &kp DLLR  &kp GRAVE                    &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_CLR_ALL  &trans
+&trans     &kp AT  &kp UNDER  &kp PRCNT  &kp DLLR  &kp DQT                      &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_CLR_ALL  &trans
                    &trans     &trans     &trans    &trans     &trans    &trans  &trans        &trans        &trans          &trans
             >;
         };
@@ -421,7 +421,7 @@
         fn {
             bindings = <
 &trans  &kp ESC       &kp F7       &kp F8        &kp F9        &kp F10                    &kp CARET  &kp MINUS      &kp PLUS         &kp EQUAL       &kp ASTRK      &trans
-&none   &mt LGUI TAB  &mt LALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp F11                    &kp FSLH   &mt RSHFT DOT  &mt RCTRL COMMA  &mt RALT COLON  &mt RGUI SEMI  &kp NUBS
+&none   &mt LGUI TAB  &mt LALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp F11                    &kp FSLH   &mt RSHFT DOT  &mt RCTRL COMMA  &mt RALT COLON  &mt RGUI SEMI  &kp BSLH
 &trans  &trans        &kp F1       &kp F2        &kp F3        &kp F12                    &kp HASH   &kp EXCL       &kp QMARK        &kp AMPS        &kp PIPE       &trans
                       &trans       &trans        &trans        &trans   &trans    &trans  &trans     &trans         &trans           &trans
             >;
