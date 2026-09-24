@@ -41,12 +41,14 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&mo 1 &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&mo 1>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&kp_lang>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 1 &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&mo 1>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&kp_lang>;
 
