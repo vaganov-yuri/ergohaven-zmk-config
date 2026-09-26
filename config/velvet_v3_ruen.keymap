@@ -153,18 +153,18 @@
         ru {
             display-name = "Ru";
             bindings = <
-&to 1       &kp RU_CYRILLIC_CHE        &kp RU_CYRILLIC_YA          &kp RU_CYRILLIC_EF           &kp RU_CYRILLIC_PE        &kp RU_CYRILLIC_BE                               &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_EL        &kp RU_CYRILLIC_SHORT_I      &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_HARD_SIGN
+&to 1       &kp RU_CYRILLIC_CHE        &kp RU_CYRILLIC_YA          &kp RU_CYRILLIC_EF           &kp RU_CYRILLIC_PE        &kp RU_CYRILLIC_ZE                               &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_EL        &kp RU_CYRILLIC_SHORT_I      &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_HARD_SIGN
 &to_lang 1  &mt_ru LGUI RU_CYRILLIC_A  &mt_ru LALT RU_CYRILLIC_ER  &mt_ru LCTRL RU_CYRILLIC_ES  &mt LSHFT RU_CYRILLIC_TE  &kp RU_CYRILLIC_GHE                              &kp RU_CYRILLIC_EM   &mt RSHFT RU_CYRILLIC_EN  &mt_ru RCTRL RU_CYRILLIC_IE  &mt_ru RALT RU_CYRILLIC_I  &mt_ru RGUI RU_CYRILLIC_O  &kp RU_CYRILLIC_E
-&kp LEFT    &kp RU_CYRILLIC_YERU       &kp RU_CYRILLIC_HA          &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_DE        &kp RU_CYRILLIC_VE                               &kp RU_CYRILLIC_KA   &kp RU_CYRILLIC_SHA       &kp RU_CYRILLIC_ZE           &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_SOFT_SIGN  &kp RIGHT
+&kp LEFT    &kp RU_CYRILLIC_YERU       &kp RU_CYRILLIC_HA          &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_DE        &kp RU_CYRILLIC_VE                               &kp RU_CYRILLIC_KA   &kp RU_CYRILLIC_SHA       &kp RU_CYRILLIC_BE           &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_SOFT_SIGN  &kp RIGHT
                                        &kp LC(C)                   &kp LC(V)                    &kp DELETE                &lt_ru 3 TAB         &lt 4 SPACE    &lt 5 ENTER  &lt_ru 2 ESC         &kp BACKSPACE             &kp RC(Z)                    &kp RC(RS(Z))
             >;
         };
 
         en {
             bindings = <
-&trans      &none       &kp W       &kp F        &kp P        &kp B                        &kp J      &kp L        &kp U        &kp Y       &none       &none
+&trans      &none       &kp W       &kp F        &kp P        &kp Z                        &kp J      &kp L        &kp U        &kp Y       &none       &none
 &to_lang 0  &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G                        &kp M      &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O  &none
-&trans      &none       &kp X       &kp C        &kp D        &kp V                        &kp K      &kp H        &kp Z        &kp Q       &none       &trans
+&trans      &none       &kp X       &kp C        &kp D        &kp V                        &kp K      &kp H        &kp B        &kp Q       &none       &trans
                         &trans      &trans       &trans       &lt 3 TAB  &trans    &trans  &lt 2 ESC  &trans       &trans       &trans
             >;
 
