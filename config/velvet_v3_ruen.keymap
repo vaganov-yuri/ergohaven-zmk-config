@@ -209,7 +209,7 @@
 
         game {
             bindings = <
-&trans     &kp ESC    &kp Q  &kp W  &kp E    &kp R                          &none  &none  &none  &none  &none  &none
+&to 1      &kp ESC    &kp Q  &kp W  &kp E    &kp R                          &none  &none  &none  &none  &none  &none
 &kp LCTRL  &kp LSHFT  &kp A  &kp S  &kp D    &kp F                          &none  &none  &none  &none  &none  &none
 &kp LALT   &kp TAB    &kp Z  &kp X  &kp C    &kp V                          &none  &none  &none  &none  &none  &none
                       &none  &none  &kp DOT  &kp GRAVE  &kp SPACE    &none  &none  &none  &none  &none
